@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<populations>
+
+
+<!-- GREEN ESH -->
+  <population Name="Joppa Outskirts" Load="Merge">
+    <object Chance="10" Number="2-4" Blueprint="GreenEsh" />
+    <object Chance="100" Number="1" Blueprint="White Esh" />
+  </population>
+  <population Name="SaltMarshZoneGlobals" Load="Merge">
+    <object Chance="30" Number="2d6" Blueprint ="GreenEsh" />
+  </population>
+  <population Name="WatervineCreatures" Load="Merge">
+    <group Name="Creatures" Style="pickone">
+      <object Weight="5" Number="2-3" Blueprint="GreenEsh" Hint="Aquatic" />
+    </group>
+  </population>
+  <population Name="DesertCanyonZoneGlobals-Reachable" Load="Merge">
+    <group Chance="95" Number="1-4" Name="Creatures" Style="pickeach">
+      <object Chance="10" Number="2d6" Blueprint="GreenEsh" />
+    </group>
+  </population>
+  <population Name="HillsZoneGlobals-Reachable" Load="Merge">
+    <group Chance="95" Number="1" Name="Creatures" Style="pickeach">
+      <object Chance="10" Number="2d6" Blueprint="GreenEsh" />
+    </group>
+  </population>
+  <population Name="FlowerfieldCreatures" Load="Merge">
+    <group Name="Creatures" Style="pickone">
+      <object Chance="10" Number="2d6" Blueprint="GreenEsh" />
+    </group>
+  </population>
+
+<!-- QUILL OF GREEN ESH -->
+  <population Name="BookBinderInventory">
+      <object Blueprint="Quill of Green Esh" Number="1" />
+  </population>
+  <population Name="ScribeInventory_Legendary">
+      <object Blueprint="Quill of Green Esh" Number="2" />
+  </population>
+  <population Name="Trinkets 4">
+    <group Name="Items" Style="pickone">
+      <object Weight="5" Number="1" Blueprint="Quill of Green Esh" />
+    </group>
+  </population>
+
+  <population Name="Trinkets 5">
+        <group Name="Items" Style="pickone">
+      <object Weight="10                                                                                                                                                                                                                                                                                                                                                                                wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww" Number="1" Blueprint="Quill Of Green Esh" />
+    </group>
+  </population>
+
+  <population Name="Trinkets 6">
+    <group Name="Items" Style="pickone">
+      <object Weight="5" Number="1" Blueprint="Quill Of Green Esh" />
+    </group>
+  </population>
+</populations>
