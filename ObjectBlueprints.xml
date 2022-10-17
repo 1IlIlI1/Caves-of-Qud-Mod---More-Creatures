@@ -2,22 +2,71 @@
 
 <objects>
 
-  <object Name="GreenEsh" Inherits="BaseBird">
-    <part Name="Render" DisplayName="green esh" RenderString="b" Tile="GreenEsh1.png,GreenEsh2.png" ColorString="&amp;g" DetailColor="w" />
+
+  <!--
+STILL NEEDS MAJOR WORK JUST TRYING TO ORGANIZE MY THOTS
+    *******************
+       MORE FOLIAGE AND FAUNA
+    *******************
+
+  -->
+
+
+
+
+
+  <!--
+
+    *******************
+     Inert Flora for Variation
+    *******************
+      - just for show, taken from 'pour 1 out 4 chat's [Bibelot](https://steamcommunity.com/sharedfiles/filedetails/?id=1477382069).  Bibelot is a treasure trove of awesome ideas.  He graciously said it was cool to use as long as attribution was paid, and it's a big help in learning how Caves of Qud, makes caves and qud.
+  -->
+
+    <object Name="FF_BIBELOT_DuneBush" Inherits="Plant">
+      <part Name="Render" DisplayName="dune bush" Tile="FF_bibelot_dunebush1.png,FF_bibelot_dunebush2.jpg,FF_bibelot_dunebush3.jpg,FF_bibelot_dunebush4.jpg" RenderString="157" ColorString="&amp;w" TileColor="&amp;w"  DetailColor="r" Occluding="false"></part>
+      <part Name="Description" Short="The dune bush seems to always look dead, yet sometimes you find a new one."></part>
+      <tag Name="DynamicObjectsTable:Saltdunes_Plants"></tag>
+    </object>
+
+    <object Name="FF_BIBELOT_AbacaPlant" Inherits="Plant">
+      <part Name="Render" DisplayName="abaca" Tile="FF_bibelot_abaca1.png,FF_bibelot_abaca2.png,FF_bibelot_abaca3.png,FF_bibelot_abaca4.png" RenderString="157" ColorString="&amp;w" TileColor="&amp;w"  DetailColor="G" Occluding="false"></part>
+      <part Name="Description" Short="A small leafy stalk that can be processed into useful fibre with the right tools."></part>
+      <tag Name="DynamicObjectsTable:Saltdunes_Plants"></tag>
+    </object>
+
+    <object Name="FF_BIBELOT_ShagbarkAcacia" Inherits="Plant">
+      <part Name="Render" DisplayName="shagbark acacia" Tile="FF_bibelot_shagbark1.png,FF_bibelot_shagbark2.png,FF_bibelot_shagbark3.png,FF_bibelot_shagbark4.png," RenderString="157" ColorString="&amp;w" TileColor="&amp;w"  DetailColor="g" Occluding="false"></part>
+      <part Name="Description" Short="A broad but short thorny tree that provides home to small birds, and a place of shade for small creatures."></part>
+      <tag Name="DynamicObjectsTable:Saltdunes_Plants"></tag>
+    </object>
+
+
+  <!--
+
+    *******************
+     Green Esh
+    *******************
+      - Relative to the White Esh.  Low Level, found around saltmarsh, has a rare drop of a quill.
+  -->
+
+
+  <object Name="FF_GreenEsh" Inherits="BaseBird">
+    <part Name="Render" DisplayName="green esh" RenderString="b" Tile="FF_GreenEsh1.png,FF_GreenEsh2.png" ColorString="&amp;g" DetailColor="w" />
     <part Name="Description" Short="Balmy, lesser cousin to the white esh of Qud's east. Swamp green feathers bend to a sinuous curve of repose. =pronouns.Possessive= stick-legs and fisher beak bracket =pronouns.possessive= body in muddy salt and dogthorn hues." />
     <stat Name="Agility" Boost="4" />
-    <part Name="Brain" Factions="Birds-100,Winged Mammals-100" FlocksWith="GreenEsh" />
-    <part Name="Corpse" CorpseChance="10" CorpseBlueprint="GreenEsh_Corpse" />
+    <part Name="Brain" Factions="Birds-100,Winged Mammals-100" FlocksWith="FF_GreenEsh" />
+    <part Name="Corpse" CorpseChance="10" CorpseBlueprint="FF_GreenEsh_Corpse" />
     <part Name="ConversationScript" ConversationID="WaterBirds" />
     <stat Name="Level" Value="4" />
     <stat Name="Hitpoints" Value="15" />
     <stat Name="ElectricResistance" Value="-50" />
     <stat Name="HeatResistance" Value="-25" />
     <property Name="Role" Value="Minion" />
-    <inventoryobject Blueprint="GreenEsh_Beak" Number="1" />
-    <inventoryobject Blueprint="GreenEsh_Peck" Number="1" />
-    <inventoryobject Blueprint="GreenEsh_Talons" Number="1" />
-    <part Name="AIFlocks" FlocksWith="GreenEsh" />
+    <inventoryobject Blueprint="FF_GreenEsh_Beak" Number="1" />
+    <inventoryobject Blueprint="FF_GreenEsh_Peck" Number="1" />
+    <inventoryobject Blueprint="FF_GreenEsh_Talons" Number="1" />
+    <part Name="AIFlocks" FlocksWith="FF_GreenEsh" />
     <part Name="AnimatedMaterialGeneric" AnimationLength="12" LowFrameOffset="1" HighFrameOffset="1" DetailColorAnimationFrames="0=Y,9=y" />
     <tag Name="NoHateFactions" Value="Joppa,Merchants,Dromad" />
     <tag Name="DynamicObjectsTable:Saltmarsh_Creatures" />
@@ -25,22 +74,22 @@
     <tag Name="DynamicObjectsTable:Hills_Creatures" />
     <tag Name="DynamicObjectsTable:Flowerfields_Creatures" />
   </object>
-  <object Name="GreenEsh_Beak" Inherits="NaturalWeapon">
+  <object Name="FF_GreenEsh_Beak" Inherits="NaturalWeapon">
     <part Name="Render" DisplayName="{{K|hooked beak}}" />
     <part Name="MeleeWeapon" BaseDamage="1d3" Skill="Axe" SecondaryStat="Agility" Slot="Face" />
     <part Name="Shield" AV="2" DV="0" WornOn="Face" />
   </object>
-  <object Name="GreenEsh_Peck" Inherits="NaturalWeapon">
+  <object Name="FF_GreenEsh_Peck" Inherits="NaturalWeapon">
     <part Name="Render" DisplayName="peck" />
     <part Name="MeleeWeapon" BaseDamage="1d3" Skill="ShortBlades" SecondaryStat="Agility" Slot="Face" />
   </object>
-  <object Name="GreenEsh_Talons" Inherits="NaturalWeapon">
+  <object Name="FF_GreenEsh_Talons" Inherits="NaturalWeapon">
     <part Name="Render" DisplayName="green esh talons" />
     <part Name="MeleeWeapon" HitBonus="20" PenBonus="1" BaseDamage="2d2" Skill="ShortBlades" Stat="Strength" Slot="Foot" />
   </object>
 
-  <object Name="GreenEsh_Corpse" Inherits="Corpse">
-    <part Name="Butcherable" OnSuccess="Quill of Green Esh" OnSuccessAmount="1" />
+  <object Name="FF_GreenEsh_Corpse" Inherits="Corpse">
+    <part Name="Butcherable" OnSuccess="FF_Perfect_GreenEsh_Quill" OnSuccessAmount="1" />
     <part Name="Render" DisplayName="green esh corpse" />
     <part Name="Description" Short="A clump of green plume and ichor." />
     <part Name="Physics" Weight="5" />
@@ -48,10 +97,10 @@
       <tag Name="DynamicObjectsTable:Corpses" />
       <tag Name="Tier" Value="5" />
   </object>
-  <object Name="Quill of Green Esh" Inherits="Item">
+  <object Name="FF_Perfect_GreenEsh_Quill" Inherits="Item">
     <part Name="Examiner" Complexity="1" UnknownDisplayName="{{G|feather}}" />
     <part Name="NoBreak" />
-    <part Name="Render" Tile="QuillofGreenEsh.png" DisplayName="{{G|quill of green esh}}" ColorString="&amp;c" TileColor="&amp;K" DetailColor="G" RenderString="k" RenderLayer="5" />
+    <part Name="Render" Tile="FF_QuillofGreenEsh.png" DisplayName="{{G|quill of green esh}}" ColorString="&amp;c" TileColor="&amp;K" DetailColor="G" RenderString="k" RenderLayer="5" />
     <part Name="Physics" Category="Trinket" />
     <part Name="AddsRep" Faction="Birds,Winged Mammals" Value="-50" />
     <part Name="Description" Short="The Green Esh plume, renowned for making the best quill. Few dorsal coverts have the calamus necessary, but the acceptable few found are often extraordinarily conformable." />
@@ -63,15 +112,15 @@
   </object>
 
   <object Name="Tszappur" Load="Merge">
-      <inventoryobject Blueprint="Perfect_GreenEsh_Quill" Number="5" />
+      <inventoryobject Blueprint="FF_Perfect_GreenEsh_Quill" Number="5" />
   </object>
 
   <object Name="ElderBob" Load="Merge">
-      <inventoryobject Blueprint="Perfect_GreenEsh_Quill" Number="2" />
+      <inventoryobject Blueprint="FF_Perfect_GreenEsh_Quill" Number="2" />
   </object>
 
   <object Name="High Priest Eschelstadt" Load="Merge">
-      <inventoryobject Blueprint="Perfect_GreenEsh_Quill" Number="2" />
+      <inventoryobject Blueprint="FF_Perfect_GreenEsh_Quill" Number="2" />
   </object>
 
 </objects>
